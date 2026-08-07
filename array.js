@@ -1,4 +1,4 @@
-// let arr = [10, 20, 30, 40, 50]
+let arr = [10, 20, 30, 40, 50]
 
 // arr.push(110) // inserting from last
 // console.log(arr);
@@ -43,7 +43,7 @@ let arr2 = new Array(3);
 // console.log(arr)
 
 // Q 43 sum array array's elements 
-let arr = [10, 20, 30, 40, 50]
+// let arr = [10, 20, 30, 40, 50]
 // let sum = 0;
 // for (let i = 0; i < arr.length; i++) {
 //     sum += arr[i]
@@ -79,19 +79,54 @@ let arr = [10, 20, 30, 40, 50]
 // console.log(`Second max is = ${secondMax} and Max = ${max} `)
 
 //Right second method 
-let max = Math.max(arr[0], arr[1]);
-let secondMax = Math.min(arr[0], arr[1]);
+// let max = Math.max(arr[0], arr[1]);
+// let secondMax = Math.min(arr[0], arr[1]);
 
-for (let i = 2; i < arr.length; i++) {
-    if (arr[i] > max) {
-        secondMax = max;
-        max = arr[i]
-    } else if (arr[i] > secondMax && arr[i] != max) {
-        secondMax = arr[i]
-    }
-}
-console.log(`Second max is = ${secondMax} and Max = ${max} `)
+// for (let i = 2; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//         secondMax = max;
+//         max = arr[i]
+//     } else if (arr[i] > secondMax && arr[i] != max) {
+//         secondMax = arr[i]
+//     }
+// }
+// console.log(`Second max is = ${secondMax} and Max = ${max} `)
 
 // Q46 Reverse an array
+// with extra space
+// let temp = new Array(arr.length)
+// let i = arr.length - 1
+// for (let j = 0; j < temp.length; j++) {
+//     temp[j] = arr[i]
+//     i--
+// }
+// console.log(arr)
+// console.log(temp)
 
+// Method 2 with no extra steps loop count
+// let i = 0;
+// let j = arr.length - 1
+// while (i < j) {
+//     let temp = arr[i]
+//     arr[i] = arr[j]
+//     arr[j] = temp
+//     i++
+//     j--
+// }
+// console.log(arr)
+// console.log(temp)
 // Q47 all zeros at left and all ones to right in an array 
+let ArrZO = [1, 1, 0, 1, 0, 1, 1, 0, 1]
+let j = 0; i = 0;
+while (i < ArrZO.length) {
+    if (ArrZO[i] === 0) {
+        let temp = ArrZO[i]
+        ArrZO[i] = ArrZO[j]
+        ArrZO[j] = temp
+        j++
+    }
+    i++
+}
+console.log(`Left zero right 1 array= ${ArrZO}`)
+
+// Q47(II) Move all the negative elements on the left side and positive elements on the right side 0(n)
