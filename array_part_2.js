@@ -76,3 +76,17 @@
 // }
 // console.log("rotate by k", arr);
 
+// Q 50  Print the count of sub-arrays whose sum is equal to the target `ex=
+let arr = [1, 2, 3, 4, 5]
+let target = 5;
+let count = 0
+for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (j = i; j < arr.length; j++) {
+        sum += arr[j];
+        if (sum === target) {
+            count++
+        }
+    }
+}
+console.log(`sum of substring= ${count}`)
