@@ -1,4 +1,4 @@
-let arr = [10, 20, 30, 40, 50]
+let arr = [10, 20, 30, 40, 50
 
 // arr.push(110) // inserting from last
 // console.log(arr);
